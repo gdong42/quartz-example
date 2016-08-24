@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:h2:~/Work/db
+    username: gandong
+    password:
+    driver-class-name: org.h2.Driver
+
+quartz:
+  enabled: true
