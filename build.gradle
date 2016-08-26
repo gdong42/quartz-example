@@ -30,6 +30,8 @@ dependencies {
 	compile(
 			'org.springframework.boot:spring-boot-starter',
 			'org.springframework:spring-context-support',
+			'org.springframework.boot:spring-boot-starter-jdbc',
+			'org.liquibase:liquibase-core:3.5.1',
 			'org.quartz-scheduler:quartz:2.2.3'
 	)
 	runtime('com.h2database:h2')
