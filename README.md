@@ -5,6 +5,7 @@ Demo project for quartz and Spring Boot
 * Spring Boot Integration
 * Clustered quartz jobs, backed by h2 database
 * Simple Repeat Job && Cron Job demonstration
+* Liquibase DB migration
 
 ## Instructions
 1. install h2
