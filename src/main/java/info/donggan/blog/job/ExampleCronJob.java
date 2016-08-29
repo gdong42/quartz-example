@@ -1,6 +1,7 @@
 package info.donggan.blog.job;
 
 import info.donggan.blog.service.FooService;
+import org.quartz.DisallowConcurrentExecution;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -14,6 +15,7 @@ import java.time.LocalTime;
  *
  * @author Gan Dong
  */
+@DisallowConcurrentExecution
 public class ExampleCronJob implements Job {
 
   @Autowired
