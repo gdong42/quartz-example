@@ -8,6 +8,7 @@ import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalTime;
+import java.util.Random;
 
 /**
  * Date: 16/8/25
@@ -24,8 +25,14 @@ public class ExampleCronJob implements Job {
   @Override
   public void execute(JobExecutionContext context)
       throws JobExecutionException {
+    int duration = new Random().nextInt(1000 * 60 * 3);
     System.out.println(LocalTime.now() +
         " -> Cron job running with instance: " + context.getFireInstanceId() +
-        ": " + fooService.getFoo());
+        ": " + fooService.getFoo() + ". Duration is about " + duration);
+    try {
+      Thread.sleep(duration);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
   }
 }
